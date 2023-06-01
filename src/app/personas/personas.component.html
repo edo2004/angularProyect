@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>List of people</h1>
+      <button class="btn btn-primary" 
+      [disabled]="disable"
+      (click)="addPerson()">add person</button>
+      <p *ngIf="show; else noPerson">{{ message }} whit title of {{ tittle }}</p>
+      <ng-template #noPerson>
+        <p>No person has been added </p>
+      </ng-template>
+      
+      <app-persona></app-persona>
+
+      <label for="">Tittle person</label>
+      <input type="text" class="form-control" 
+      [(ngModel)] = 'tittle'>
+      {{ tittle }}
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Calculator</h1>
+      <label for="">Operator A</label>
+      <input type="number" class="form-control"
+      [(ngModel)]='OperatorA'>
+      <label for="">Operator B</label>
+      <input type="number" class="form-control"
+      [(ngModel)]='OperatorB'>
+      <button class="btn btn-primary"
+      [disabled]="enable" 
+      (click)="sum()">Sum</button>
+      <p>The result is: {{ result }}</p>
+
+    </div>
+  </div>
+</div>
